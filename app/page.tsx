@@ -1,7 +1,28 @@
+import roomsData from "@/data/rooms.json";
+import RoomCard from "@/components/room-card";
+
 export default function Home() {
-  return (
-    <>
-      <h1>Bookit app</h1>
-    </>
-  );
+  const roomsInfo =
+    roomsData.length > 0 ? (
+      roomsData.map((room) => (
+        <RoomCard
+          key={room.$id}
+          $id={room.$id}
+          user_id={room.user_id}
+          name={room.name}
+          description={room.description}
+          sqft={room.sqft}
+          capacity={room.capacity}
+          location={room.location}
+          address={room.address}
+          amenities={room.amenities}
+          availability={room.availability}
+          price_per_hour={room.price_per_hour}
+          image={room.image}
+        />
+      ))
+    ) : (
+      <p>Rooms is empty</p>
+    );
+  return <>{roomsInfo}</>;
 }
