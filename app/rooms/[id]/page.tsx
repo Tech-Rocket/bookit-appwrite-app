@@ -44,7 +44,7 @@ export default async function RoomDetailPage({ params }: ParamsTypes) {
 
             <ul className="space-y-2">
               <li>
-                <span className="font-semibold text-gray-800">Size:</span>{" "}
+                <span className="font-semibold text-gray-800">Size: </span>
                 {roomInfo.sqft}
                 sq ft
               </li>
@@ -55,11 +55,11 @@ export default async function RoomDetailPage({ params }: ParamsTypes) {
                 {roomInfo.availability}
               </li>
               <li>
-                <span className="font-semibold text-gray-800">Price:</span>$
+                <span className="font-semibold text-gray-800">Price: </span>$
                 {roomInfo.price_per_hour}/hour
               </li>
               <li>
-                <span className="font-semibold text-gray-800">Address:</span>{" "}
+                <span className="font-semibold text-gray-800">Address: </span>{" "}
                 {roomInfo.address}
               </li>
             </ul>
