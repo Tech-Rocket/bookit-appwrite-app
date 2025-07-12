@@ -1,3 +1,6 @@
+import { ImExit } from "react-icons/im";
+import { FaUser, FaLayerGroup } from "react-icons/fa";
+import { IoMdLogIn } from "react-icons/io";
 import siteLogo from "@/public/images/logo.svg";
 import Image from "next/image";
 import Link from "next/link";
@@ -15,6 +18,7 @@ export default function Header() {
                 alt="Bookit"
                 width={500}
                 height={500}
+                priority={true}
               />
             </Link>
             <div className="hidden md:block">
@@ -47,24 +51,27 @@ export default function Header() {
               {/* <!-- Logged Out Only --> */}
               <Link
                 href="login.html"
-                className="mr-3 text-gray-800 hover:text-gray-600"
+                className="mr-3 text-gray-800 hover:text-gray-600 flex items-center gap-1"
               >
-                <i className="fa fa-sign-in"></i> Login
+                <IoMdLogIn /> Login
               </Link>
               <Link
                 href="register.html"
-                className="mr-3 text-gray-800 hover:text-gray-600"
+                className="mr-3 text-gray-800 hover:text-gray-600 flex items-center gap-1"
               >
-                <i className="fa fa-user"></i> Register
+                <FaUser /> Register
               </Link>
-              <Link href="my-rooms.html">
-                <i className="fa fa-building"></i> My Rooms
+              <Link
+                href="my-rooms.html"
+                className="mx-3 text-gray-800 hover:text-gray-600 flex items-center gap-1"
+              >
+                <FaLayerGroup /> My Rooms
               </Link>
               <Link
                 href="login.html"
-                className="mx-3 text-gray-800 hover:text-gray-600"
+                className="mx-3 text-gray-800 hover:text-gray-600 flex items-center gap-1"
               >
-                <i className="fa fa-sign-out"></i> Sign Out
+                <ImExit /> Sign Out
               </Link>
             </div>
           </div>
