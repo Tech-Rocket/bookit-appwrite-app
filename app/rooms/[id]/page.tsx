@@ -6,12 +6,14 @@ import { FaArrowLeft } from "react-icons/fa";
 import BookingForm from "./booking-form";
 
 interface ParamsTypes {
-  params: {
-    id: string;
-  };
+  id: string;
 }
 
-export default async function RoomDetailPage({ params }: ParamsTypes) {
+export default async function RoomDetailPage({
+  params,
+}: {
+  params: ParamsTypes;
+}) {
   const { id } = params;
   const roomInfo = roomsData.find((data) => data.$id === id);
 
