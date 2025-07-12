@@ -1,5 +1,6 @@
 import roomsData from "@/data/rooms.json";
 import RoomCard from "@/components/room-card";
+import DynamicHeading from "@/components/dynamic-heading";
 
 export default function Home() {
   const roomsInfo =
@@ -24,5 +25,10 @@ export default function Home() {
     ) : (
       <p>Rooms is empty</p>
     );
-  return <>{roomsInfo}</>;
+  return (
+    <>
+      <DynamicHeading title="Available Rooms" />
+      {roomsInfo}
+    </>
+  );
 }
