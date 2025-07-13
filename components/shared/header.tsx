@@ -62,13 +62,13 @@ export default function Header() {
                 <FaUser /> Register
               </Link>
               <Link
-                href="my-rooms.html"
+                href="/my-rooms"
                 className="mx-3 text-gray-800 hover:text-gray-600 flex items-center gap-1"
               >
                 <FaLayerGroup /> My Rooms
               </Link>
               <Link
-                href="login.html"
+                href="/login"
                 className="mx-3 text-gray-800 hover:text-gray-600 flex items-center gap-1"
               >
                 <ImExit /> Sign Out
@@ -89,13 +89,13 @@ export default function Header() {
           </Link>
           {/* <!-- Logged In Only --> */}
           <Link
-            href="/bookings.html"
+            href="/bookings"
             className="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-gray-700 hover:text-white"
           >
             Bookings
           </Link>
           <Link
-            href="/add-room.html"
+            href="/add-room"
             className="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-gray-700 hover:text-white"
           >
             Add Room
