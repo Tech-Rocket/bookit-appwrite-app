@@ -1,8 +1,11 @@
-import roomsData from "@/data/rooms.json";
+// import roomsData from "@/data/rooms.json";
 import RoomCard from "@/components/room-card";
 import DynamicHeading from "@/components/dynamic-heading";
+import getAllRooms from "./actions/getAllRooms";
 
-export default function Home() {
+export default async function Home() {
+  const roomsData = await getAllRooms();
+
   const roomsInfo =
     roomsData.length > 0 ? (
       roomsData.map((room) => (
