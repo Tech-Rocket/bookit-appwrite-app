@@ -50,13 +50,13 @@ export default function Header() {
             <div className="ml-4 flex items-center md:ml-6">
               {/* <!-- Logged Out Only --> */}
               <Link
-                href="login.html"
+                href="/login"
                 className="mr-3 text-gray-800 hover:text-gray-600 flex items-center gap-1"
               >
                 <IoMdLogIn /> Login
               </Link>
               <Link
-                href="register.html"
+                href="/register"
                 className="mr-3 text-gray-800 hover:text-gray-600 flex items-center gap-1"
               >
                 <FaUser /> Register
