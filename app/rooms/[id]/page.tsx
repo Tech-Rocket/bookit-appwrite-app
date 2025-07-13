@@ -1,5 +1,6 @@
 import DynamicHeading from "@/components/dynamic-heading";
-import roomsData from "@/data/rooms.json";
+// import roomsData from "@/data/rooms.json";
+import getSingleRoom from "@/app/actions/getSingleRoom";
 import Link from "next/link";
 import Image from "next/image";
 import { FaArrowLeft } from "react-icons/fa";
@@ -15,7 +16,8 @@ export default async function RoomDetailPage({
   params: ParamsTypes;
 }) {
   const { id } = params;
-  const roomInfo = roomsData.find((data) => data.$id === id);
+
+  const roomInfo = await getSingleRoom(id);
 
   if (!roomInfo) {
     return <DynamicHeading title="Room Not Found" />;
