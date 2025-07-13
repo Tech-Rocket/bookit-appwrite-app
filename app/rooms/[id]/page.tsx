@@ -6,16 +6,16 @@ import Image from "next/image";
 import { FaArrowLeft } from "react-icons/fa";
 import BookingForm from "./booking-form";
 
-interface ParamsTypes {
+type ParamsTypes = Promise<{
   id: string;
-}
+}>;
 
 export default async function RoomDetailPage({
   params,
 }: {
   params: ParamsTypes;
 }) {
-  const { id } = params;
+  const { id } = await params;
 
   const roomInfo = await getSingleRoom(id);
 
